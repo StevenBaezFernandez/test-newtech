@@ -30,15 +30,12 @@ function App() {
     });
 
     setFilterUni(newFilteredUni);
-  });
-
-  console.log(data);
-  console.log(searchField);
+  },[searchField, data]);
   return (
     <div className="App">
 
 
-    <input type="search" onChange={handlerChange} placeholder='buscar'/>
+    <input className='input' type="search" onChange={handlerChange} placeholder='buscar'/>
 
     <div className="container">
         {filteredUni ?
